@@ -1,0 +1,25 @@
+# Python缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 环境变量（重点！防止密钥上传到网上！！）
+.env
+
+# Streamlit缓存
+.streamlit/cache/
+
+# 日志
+*.log
+
+# 本地临时文件
+*.tmp
+*.bak
+
+# ngrok相关
+ngrok*
+*.zip
+
+# VSCode本地配置
+.vscode/
