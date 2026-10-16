@@ -312,19 +312,19 @@ elif mode == L["mode_eye"]:
         st.session_state.current_input = eye_templates[eye_case]
         st.rerun()
     st.divider()
-    # 【13】OCR视力单图片上传识别
-    st.markdown(L["ocr_tip"])
-    upload_img = st.file_uploader(L["upload_label"], type=["jpg","png","jpeg"])
-    if upload_img is not None:
-        img = Image.open(upload_img)
-        st.image(img, width=400)
-        # 如果没有装Tesseract，注释下面一行
-        text_from_img = pytesseract.image_to_string(img, lang='chi_sim')
-        st.write(L["ocr_result"], text_from_img)
-        if st.button(L["ocr_fill_btn"]):
-            st.session_state.current_input = text_from_img
-            st.rerun()
-    st.divider()
+   # # 【13】OCR视力单图片上传识别
+   #st.markdown(L["ocr_tip"])
+    #upload_img = st.file_uploader(L["upload_label"], type=["jpg","png","jpeg"])
+    #if upload_img is not None:
+        #img = Image.open(upload_img)
+        #st.image(img, width=400)
+        ## 如果没有装Tesseract，注释下面一行
+       # text_from_img = pytesseract.image_to_string(img, lang='chi_sim')
+       # st.write(L["ocr_result"], text_from_img)
+        #if st.button(L["ocr_fill_btn"]):
+            #st.session_state.current_input = text_from_img
+            #st.rerun()
+    #st.divider()
     # 语音录入
     st.markdown(L["voice_tip_eye"])
     eye_text_out = speech_to_text(language='zh', just_once=True, key='mic_eye')
