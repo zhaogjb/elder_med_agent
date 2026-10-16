@@ -4,6 +4,3 @@ streamlit-mic-recorder>=0.0.8
 speechrecognition>=3.10.0
 pillow>=10.0
 
-# paddleocr Linux适配，分开安装，避免一次性安装超时
-paddlepaddle==2.6.1
-paddleocr==2.7.0.3
